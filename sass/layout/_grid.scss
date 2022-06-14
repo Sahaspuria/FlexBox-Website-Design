@@ -1,0 +1,33 @@
+.row {
+  display: flex;
+  margin: 0 10%;
+  gap: 4rem;
+
+  @include respond(phone) {
+    flex-direction: column;
+  }
+  @include respond(tab-land) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.col-1-of-2 {
+  flex: 1 1 50%;
+}
+.col-1-of-3 {
+  flex: 1;
+}
+.col-1-of-4 {
+  @include respond(tab-land) {
+    flex-basis: 45%;
+  }
+  flex: 1;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  margin: 0 10%;
+  gap: 8rem;
+}
